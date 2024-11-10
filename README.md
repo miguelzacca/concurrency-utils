@@ -12,16 +12,17 @@ for (const chunk of getChunk(data, 100)) {
 }
 ```
 
-Resolve promises with max concurrency
+Resolve promises with max concurrency:
 
 ```ts
 import { resolvePromises } from 'concurrency-utils'
 
 const actions = [
-  () => // async action,
-  () => // async action,
+  async () => // async action,
+  async () => // async action,
   async () => // sync action,
   async () => // sync action,
+  ...
 ]
 
 await resolvePromises(actions, 2)
@@ -36,6 +37,6 @@ getChunk(data: any[], chunkSize: number)
 ```ts
 resolvePromises(
   promiseFunctions: (() => Promise<any>)[],
-  maxconcurrency-utils: number // default is 10
+  maxConcurrency: number // default is 10
 )
 ```
