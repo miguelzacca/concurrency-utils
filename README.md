@@ -1,5 +1,9 @@
 # concurrency-utils
 
+```bash
+npm install concurrency-utils
+```
+
 Generate chunks:
 
 ```ts
